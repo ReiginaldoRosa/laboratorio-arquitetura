@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratório de Arquitetura - IFB</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Laboratório Digital de Arquitetura</h1>
+        <nav>
+            <button class="nav-link" data-section="bases">Bases Numéricas</button>
+            <button class="nav-link" data-section="logica">Lógica Booleana</button>
+            <button class="nav-link" data-section="api-extra">Curiosidades Math</button>
+        </nav>
+    </header>
+
+    <main id="content">
+        <section id="bases" class="tab-content active">
+            <h2>Calculadora de Bases Didática</h2>
+            <div class="input-group">
+                <input type="number" id="numDecimal" placeholder="Digite um número decimal">
+                <button id="btnConverter">Converter</button>
+            </div>
+            <div id="resultadoBases" class="resultado-container">
+                <p>O resultado e o passo a passo aparecerão aqui.</p>
+            </div>
+        </section>
+
+        <section id="logica" class="tab-content hidden">
+            <h2>Gerador de Tabela Verdade (AND / OR)</h2>
+            <p>Simule a saída lógica para as variáveis A e B.</p>
+
+            <div class="input-group">
+                <select id="operadorLogico">
+                    <option value=".">AND (Produto .)</option>
+                    <option value="+">OR (Soma +)</option>
+                </select>
+                <button id="btnGerarTabela">Gerar Tabela</button>
+            </div>
+
+            <div id="resultadoLogica" class="resultado-container">
+            </div>
+        </section>
+
+        <section id="api-extra" class="tab-content hidden">
+            <h2>Curiosidades Matemáticas (API)</h2>
+            <div id="api-data" class="resultado-container">
+                Carregando dados externos via Fetch...
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Reiginaldo Rosa - Tecnologia em Sistemas - IFB</p>
+    </footer>
+
+    <script type="module" src="js/App.js"></script>
+</body>
+
+</html>
