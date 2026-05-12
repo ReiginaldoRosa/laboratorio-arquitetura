@@ -1,0 +1,133 @@
+:root {
+    --primary: #0288d1;
+    --secondary: #00796b;
+    --bg: #f4f6f9;
+    --white: #ffffff;
+    --text: #333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+.nav-link {
+    background: white;
+    border: none;
+    padding: 10px 25px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    color: var(--primary);
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    background: #e0e0e0;
+}
+
+/* Classes de Controle da SPA */
+.hidden {
+    display: none !important;
+}
+
+.active {
+    display: block !important;
+    animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.resultado-container {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-resultado {
+    border-left: 5px solid var(--primary);
+    padding: 15px;
+    text-align: left;
+}
+
+.passo-item {
+    background: #e1f5fe;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.destaque {
+    color: #d32f2f;
+    font-size: 1.5rem;
+}
+
+.api-card {
+    text-align: left;
+    background: #fff3e0;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #ff9800;
+}
+
+.api-card ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.raca-item {
+    background: white;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    font-size: 0.9rem;
+}
+
+.tabela-verdade {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.tabela-verdade th, .tabela-verdade td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+.tabela-verdade th {
+    background-color: var(--primary);
+    color: white;
+}
+
+.resultado-bit {
+    font-weight: bold;
+    color: var(--secondary);
+}
